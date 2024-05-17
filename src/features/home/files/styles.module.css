@@ -1,0 +1,44 @@
+.table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table tr {
+    border: 1px solid #e5e7eb;
+}
+
+.table th {
+    color: #6b7280;
+    font-weight: normal;
+}
+
+.table th, .table td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+.table tbody {
+    background: #fff;
+}
+
+.textSecondary {
+    color: #6b7280;
+}
+
+.fileIcon {
+    width: 20px;
+    height: 20px;
+    color: #6b7280;
+}
+
+.fileName {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.fileName a {
+    color: #000;
+    text-decoration: none;
+}

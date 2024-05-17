@@ -1,11 +1,11 @@
 import { UploadDocumentControl } from "./upload-document-control";
 import styles from "./styles.module.css";
-import Button from "./button";
-import Select from "./select";
+import { Button } from "@/components/button";
+import { Select } from "@/components/select";
 import { SubmitIcon } from "./submit-icon";
 import { CancelIcon } from "./cancel-icon";
 
-export default function UploadDocumentFeature() {
+export function SendDocumentFeature() {
   return (
     <div className={styles.container}>
       <div className={styles.form}>

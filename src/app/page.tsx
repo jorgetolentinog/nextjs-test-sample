@@ -1,9 +1,5 @@
-import UploadDocumentFeature from "@/features/upload-document/ui";
+import HomeFeature from "@/features/home";
 
 export default function Home() {
-  return (
-    <div>
-      <UploadDocumentFeature />
-    </div>
-  );
+  return <HomeFeature />;
 }

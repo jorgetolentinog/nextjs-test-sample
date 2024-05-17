@@ -1,0 +1,24 @@
+.content {
+  height: 250px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  flex-direction: column;
+
+  /* Dashed Border Generator
+   * Link: https://kovart.github.io/dashed-border-generator/
+   * >>>
+   */ 
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='6' ry='6' stroke='%23D1D5DBFF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 6px;
+  /* <<< */
+}
+
+.icon {
+  margin-bottom: 10px;
+  color: #6b7280;
+  width: 32px;
+  height: 32px;
+}

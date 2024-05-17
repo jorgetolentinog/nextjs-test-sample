@@ -6,3 +6,12 @@
     font-family: inherit;
     font-size: inherit;
 }
+
+.select:hover {
+    background-color: #f4f4f5;
+}
+
+.select:disabled {
+    cursor: not-allowed;
+    background-color: #f4f4f5;
+}

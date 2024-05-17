@@ -18,6 +18,12 @@
     background-color: #f4f4f5;
 }
 
+.button:disabled {
+    cursor: not-allowed;
+    background-color: #f4f4f5;
+    color: #d1d5db;
+}
+
 .icon {
     margin-right: .5rem;
     max-width: 16px;

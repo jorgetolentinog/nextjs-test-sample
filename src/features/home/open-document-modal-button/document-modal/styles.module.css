@@ -1,0 +1,55 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1;
+}
+
+.modal {
+  display: block;
+  background: #fff;
+  width: fit-content;
+  padding: 30px;
+  margin: 30px auto 30px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 16px;
+  width: fit-content;
+  align-items: flex-end;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.formActions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
