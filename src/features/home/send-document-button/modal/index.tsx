@@ -48,7 +48,7 @@ export function Modal(props: Props) {
   return (
     <>
       <div className={styles.backdrop} />
-      <div className={styles.modal}>
+      <div className={styles.modal} role="dialog" aria-label="Enviar documento">
         <form className={styles.form}>
           <div className={styles.formGroup}>
             <label>Tipo de documento</label>
@@ -63,7 +63,7 @@ export function Modal(props: Props) {
             <FileControl />
           </div>
           <div className={styles.formActions}>
-            <Button disabled={isSubmitting} onClick={onClose}>
+            <Button disabled={isSubmitting} onClick={onClose} type="button">
               <CancelIcon className={styles.buttonIcon} />
               Cancelar
             </Button>
