@@ -1,10 +1,10 @@
-import { ClearDocumentButton } from "./clear-document-button";
-import { DocumentPreview } from "./document-preview";
+import { ResetButton } from "./reset-button";
+import { Preview } from "./preview";
 import { ScanButton } from "./scan-button";
 import { SelectButton } from "./select-button";
 import styles from "./styles.module.css";
 
-export function UploadDocumentControl() {
+export function FileControl() {
   return (
     <div className={styles.container}>
       <div className={styles.stack}>
@@ -13,8 +13,8 @@ export function UploadDocumentControl() {
           <ScanButton />
         </section>
         <section className={styles.previewSection}>
-          <DocumentPreview />
-          <ClearDocumentButton />
+          <Preview />
+          <ResetButton />
         </section>
       </div>
     </div>

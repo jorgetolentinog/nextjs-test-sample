@@ -1,10 +1,7 @@
-import { Button } from "@/components/button";
 import { FilesFeature } from "./files";
-import { SendDocumentFeature } from "./send-document-modal";
-import { SendIcon } from "./send-icon";
 import styles from "./styles.module.css";
-import { DirIcon } from "./dir-icon";
-import { OpenDocumentModalButton } from "./open-document-modal-button";
+import { FolderIcon } from "./folder-icon";
+import { SendDocumentButton } from "./send-document-button";
 
 export default function HomeFeature() {
   return (
@@ -12,13 +9,12 @@ export default function HomeFeature() {
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.dirName}>
-            <DirIcon className={styles.dirIcon} />
+            <FolderIcon className={styles.dirIcon} />
             Nombre de la carpeta
           </div>
-          <OpenDocumentModalButton />
+          <SendDocumentButton />
         </div>
         <FilesFeature />
-        {/* <SendDocumentFeature /> */}
       </div>
     </div>
   );

@@ -3,10 +3,10 @@
 import { Button } from "@/components/button";
 import { SendIcon } from "../send-icon";
 import styles from "./styles.module.css";
-import { DocumentModal } from "./document-modal";
+import { Modal } from "./modal";
 import { useState } from "react";
 
-export function OpenDocumentModalButton() {
+export function SendDocumentButton() {
   const [toggleModal, setToggleModal] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export function OpenDocumentModalButton() {
         <SendIcon className={styles.sendIcon} />
         Enviar documento
       </Button>
-      {toggleModal && <DocumentModal onClose={() => setToggleModal(false)} />}
+      {toggleModal && <Modal onClose={() => setToggleModal(false)} />}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { Icon } from "./icon";
 
-export function ClearDocumentButton() {
+export function ResetButton() {
   return (
     <button
       className={styles.button}

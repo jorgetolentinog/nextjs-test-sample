@@ -5,7 +5,7 @@ interface Props {
   fileContent: string;
 }
 
-export function DocumentPreview() {
+export function Preview() {
   return (
     <div className={styles.container}>
       <Blank />
