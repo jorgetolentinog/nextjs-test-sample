@@ -22,10 +22,9 @@ export function Preview(props: Props) {
     );
   }
 
-  const isPhoto =
-    props.document.type === "image/jpeg" || props.document.type === "image/png";
-  const isPdf = props.document.type === "application/pdf";
+  const { type } = props.document;
 
+  const isPhoto = type === "image/jpeg" || type === "image/png";
   if (isPhoto) {
     return (
       <div className={styles.container}>
@@ -34,6 +33,7 @@ export function Preview(props: Props) {
     );
   }
 
+  const isPdf = type === "application/pdf";
   if (isPdf) {
     return (
       <div className={styles.container}>

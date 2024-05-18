@@ -6,8 +6,8 @@ interface Props {
 
 export function Photo(props: Props) {
   return (
-    <div className={styles.photo}>
-      <img src={props.data} alt="Preview" />
+    <div className={styles.photo} data-testid="preview-photo">
+      <img src={props.data} />
     </div>
   );
 }

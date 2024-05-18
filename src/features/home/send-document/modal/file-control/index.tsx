@@ -25,6 +25,10 @@ export function FileControl() {
     setDocument(args);
   }
 
+  function handleReset() {
+    setDocument(undefined);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.stack}>
@@ -34,7 +38,12 @@ export function FileControl() {
         </section>
         <section className={styles.previewSection}>
           <Preview document={document} />
-          <ResetButton />
+          <ResetButton
+            type="button"
+            role="button"
+            tabIndex={0}
+            onClick={handleReset}
+          />
         </section>
       </div>
     </div>
