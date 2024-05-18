@@ -65,3 +65,22 @@ test("deberia permitir borrar el documento seleccionado", async ({ page }) => {
     await expect(page.getByTestId('preview-photo')).not.toBeVisible()
     await expect(page.getByTestId('preview-blank')).toBeVisible()
 })
+
+test("deberia permitir seleccionar el mismo documento si lo borro y se vuelve a seleccionar", async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('button', { name: 'Enviar documento' }).click();
+
+    const fileChooserPromise = page.waitForEvent('filechooser');
+    await page.getByRole('button', { name: 'Seleccionar documento' }).click();
+    const fileChooser = await fileChooserPromise;
+    await fileChooser.setFiles(['./tests/files/example.jpg']);
+
+    await page.getByRole('button', { name: 'Borrar documento' }).click();
+
+    const fileChooserPromise2 = page.waitForEvent('filechooser');
+    await page.getByRole('button', { name: 'Seleccionar documento' }).click();
+    const fileChooser2 = await fileChooserPromise2;
+    await fileChooser2.setFiles(['./tests/files/example.jpg']);
+
+    await expect(page.getByTestId('preview-photo')).toBeVisible()
+})

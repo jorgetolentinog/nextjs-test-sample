@@ -62,6 +62,7 @@ export function SelectFileButton(props: Props) {
         id="file-upload"
         onChange={handleChange}
         disabled={processing}
+        value=""
         style={{ display: "none" }}
       />
     </div>
