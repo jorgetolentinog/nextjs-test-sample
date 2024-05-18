@@ -20,6 +20,11 @@
     background-color: #f4f4f5;
 }
 
+.label[aria-disabled="true"] {
+    cursor: not-allowed;
+    background-color: #f4f4f5;
+}
+
 .icon {
     font-size: 2rem;
     margin-right: .5rem;

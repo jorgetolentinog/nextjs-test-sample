@@ -1,0 +1,16 @@
+.notSupport {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  flex-direction: column;
+  background: #f4f4f4;
+}
+
+.icon {
+  margin-bottom: 10px;
+  color: #6b7280;
+  width: 32px;
+  height: 32px;
+}

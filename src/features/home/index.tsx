@@ -1,7 +1,7 @@
 import { FilesFeature } from "./files";
 import styles from "./styles.module.css";
 import { FolderIcon } from "./folder-icon";
-import { SendDocumentButton } from "./send-document-button";
+import { SendDocumentButton } from "./send-document";
 
 export default function HomeFeature() {
   return (
