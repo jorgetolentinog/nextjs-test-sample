@@ -1,17 +1,9 @@
 import styles from "./styles.module.css";
 import { Icon } from "./icon";
 import { useState } from "react";
+import { FileInputButton } from "../file-input-button";
 
-interface Props {
-  onChange?: (args: {
-    data: string;
-    name: string;
-    type: string;
-    size: number;
-  }) => void;
-}
-
-export function SelectFileButton(props: Props) {
+export const SelectFileButton: FileInputButton = (props) => {
   const [processing, setProcessing] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {

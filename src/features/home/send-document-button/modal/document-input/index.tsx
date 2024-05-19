@@ -1,11 +1,11 @@
 import { ResetButton } from "./reset-button";
 import { Preview } from "./preview";
-import { ScanButton } from "./scan-button";
-import { SelectFileButton } from "./select-file-button";
+import { ScanButton } from "./file-input-button/scan-button";
+import { SelectFileButton } from "./file-input-button/select-file-button";
 import styles from "./styles.module.css";
 import { useState } from "react";
 
-export function FileControl() {
+export function DocumentInput() {
   const [document, setDocument] = useState<
     | {
         data: string;

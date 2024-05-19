@@ -1,6 +1,6 @@
 "use client";
 
-import { FileControl } from "./file-control";
+import { DocumentInput } from "./document-input";
 import styles from "./styles.module.css";
 import { Button } from "@/components/button";
 import { Select } from "@/components/select";
@@ -62,7 +62,7 @@ export function SendDocumentModal(props: Props) {
           </div>
           <div className={styles.formGroup}>
             <label>Subir documento</label>
-            <FileControl />
+            <DocumentInput />
           </div>
           <div className={styles.formActions}>
             <Button disabled={isSubmitting} onClick={onClose} type="button">
