@@ -3,6 +3,7 @@
   height: 250px;
   background: #e4e4e7;
   text-align: center;
+  display: block;
 }
 
 .photo img {

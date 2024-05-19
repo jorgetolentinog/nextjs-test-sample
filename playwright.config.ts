@@ -7,6 +7,8 @@ const config: PlaywrightTestConfig = {
     // Timeout per test
     timeout: 10 * 1000,
 
+    fullyParallel: !process.env.CI,
+
     // If a test fails, retry it additional 2 times
     // retries: 2,
 

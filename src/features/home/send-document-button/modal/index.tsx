@@ -1,3 +1,5 @@
+"use client";
+
 import { FileControl } from "./file-control";
 import styles from "./styles.module.css";
 import { Button } from "@/components/button";
@@ -5,14 +7,18 @@ import { Select } from "@/components/select";
 import { SubmitIcon } from "./submit-icon";
 import { CancelIcon } from "./cancel-icon";
 import { sendAction } from "./actions";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface Props {
   onClose?: () => void;
 }
 
-export function Modal(props: Props) {
+export function SendDocumentModal(props: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onClose = useCallback(() => {
+    props.onClose?.();
+  }, [props]);
 
   useEffect(() => {
     function handle(event: KeyboardEvent) {
@@ -23,11 +29,7 @@ export function Modal(props: Props) {
 
     document.addEventListener("keydown", handle);
     return () => document.removeEventListener("keydown", handle);
-  }, []);
-
-  function onClose() {
-    props.onClose?.();
-  }
+  }, [onClose]);
 
   const submit = () => {
     setIsSubmitting(true);
