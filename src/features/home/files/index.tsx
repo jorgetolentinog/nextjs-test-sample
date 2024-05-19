@@ -1,9 +1,11 @@
 import { FileIcon } from "./file-icon";
 import styles from "./styles.module.css";
 
-export function FilesFeature() {
+export async function FilesFeature() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
-    <table className={styles.table}>
+    <table className={styles.table} aria-label="Listado de archivos">
       <thead>
         <tr>
           <th>Nombre</th>

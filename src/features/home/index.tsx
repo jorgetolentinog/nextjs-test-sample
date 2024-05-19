@@ -2,6 +2,7 @@ import { FilesFeature } from "./files";
 import styles from "./styles.module.css";
 import { FolderIcon } from "./folder-icon";
 import { SendDocumentButton } from "./send-document-button";
+import { Suspense } from "react";
 
 export default function HomeFeature() {
   return (
@@ -14,7 +15,9 @@ export default function HomeFeature() {
           </div>
           <SendDocumentButton />
         </div>
-        <FilesFeature />
+        <Suspense fallback={<div>Cargando...</div>}>
+          <FilesFeature />
+        </Suspense>
       </div>
     </div>
   );
